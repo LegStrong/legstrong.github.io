@@ -57,10 +57,6 @@
                 <span class="nav-text">归档</span>
             </a>
         
-            <a class="nav-item" href="/atom.xml">
-                <span class="nav-text">订阅</span>
-            </a>
-        
             <a class="nav-item" href="/about">
                 <span class="nav-text">关于</span>
             </a>
@@ -131,6 +127,11 @@
 </a>
 
             
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/tag1/">tag1</a>, <a class="article-tag-link" href="/tags/tag2/">tag2</a>, <a class="article-tag-link" href="/tags/tag3/">tag3</a>
+</div>
+
 
         </div>
     </header>
@@ -139,31 +140,15 @@
         
         <h2 id="什么是GitHub-Pages"><a href="#什么是GitHub-Pages" class="headerlink" title="什么是GitHub Pages"></a>什么是GitHub Pages</h2><p>GitHub Pages是一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。</p>
 <h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo ?"></a>什么是Hexo ?</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><p>创建个人GitHub Page<br>安装Hexo<br>使用Hexo创建博客<br>推送网站<br>绑定域名<br>更换主题<br>初识MarkDown语法<br>发布文章<br>寻找图床<br>个性化设置<br>其他<br>附录</p>
-<h3 id="创建个人GitHub-Page"><a href="#创建个人GitHub-Page" class="headerlink" title="创建个人GitHub Page"></a>创建个人GitHub Page</h3><p>在GitHub并创建一个名为username.github.io的仓库，username是指GitHub的用户名（或组织名称）。<br>克隆仓库<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/username.github.io</span><br></pre></td></tr></table></figure></p>
-<p>进入工程目录并添加index.html<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd username.github.io</span><br><span class="line">echo "Hello World"&gt;index.html</span><br></pre></td></tr></table></figure></p>
-<p>提交<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br><span class="line">git commit -m "Initial commit"</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
-<p>到此个人页面创建完成，用浏览器打开username.github.io即可查看创建的个人页面。</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>安装 Hexo 相当简单，但是在安装前必须安装Node.js ( 6.9及其以上版本 ) 和Git。<br>只需要使用 npm 即可完成 Hexo 的安装。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<h3 id="使用Hexo创建博客"><a href="#使用Hexo创建博客" class="headerlink" title="使用Hexo创建博客"></a>使用Hexo创建博客</h3><p>初始化我们的博客<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
-<p>新建完成后，指定文件夹的目录如下：<br>.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
-<p>_config.yml 网站的配置信息，可以在此配置大部分的参数<br>source 资源文件夹是存放用户资源的地方。<br>themes 主题文件夹。Hexo 会根据主题来生成静态页面。<br>本地预览<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site	#新建博客</span><br><span class="line">hexo g					#生成</span><br><span class="line">hexo s					#启动服务</span><br></pre></td></tr></table></figure></p>
-<p>完成后，打开浏览器输入地址：localhost:4000，即可看到我们写出第一篇博客。<br>常用命令<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g 	#安装Hexo</span><br><span class="line">npm update hexo -g		#升级 </span><br><span class="line">hexo init				#初始化博客</span><br><span class="line"></span><br><span class="line">hexo n "my_blog"		#hexo new 新建文章</span><br><span class="line">hexo g					#hexo generate 生成</span><br><span class="line">hexo s					#hexo server 启动服务预览</span><br><span class="line">hexo d 					#hexo deploy 部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br></pre></td></tr></table></figure></p>
-<h3 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h3><p>上面只是在本地预览，接下来要做的就是就是推送网站到GitHub Pages，在博客根目录里的_config.yml文件为站点配置文件<br>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：<br>deploy:<br>  type: git<br>  repo: 填写在GitHub上创建仓库的完整路径，记得加上 .git<br>  branch: master<br>注意：冒号后面必须有个空格<br>要将博客部署到我们GitHub的仓库里，我们还需安装Git部署插件。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p>最后依此执行清楚、生成、部署命令<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<p>最后打开<a href="https://username.github.io" target="_blank" rel="noopener">https://username.github.io</a> 即可查看部署后的博客。</p>
-<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>如果你不喜欢Hexo默认的主题，可以更换不同的主题，主题传送门：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Themes</a> 我自己使用的是<a href="https://github.com/Sanonz/hexo-theme-concise" target="_blank" rel="noopener">Concise</a>主题，可以在blog目录中的themes文件夹中查看你自己主题是什么。现在把默认主题更改成Conciset主题，在blog目录中打开命令行输入：</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>因为这个主题使用了 less 编译，Hexo 默认的编译器为 hexo-renderer-stylus 要切换为 hexo-renderer-less<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-less --save</span><br></pre></td></tr></table></figure></p>
-<p>安装主题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise</span><br></pre></td></tr></table></figure></p>
-<p>在 _config.yml 配置文件中 把 theme 值改为 concise.<br>复制 themes/concise/_config.example.yml 配置文件为 themes/concise/_config.yml</p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>根据个人情况，修改 themes/concise/_config.yml 配置文件</p>
-<h4 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h4><p>可以关闭单个文章的评论，把 comments 设置为 false，默认为 true，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2017-10-20 20:00:00</span><br><span class="line">comments: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<p>访问 Tags 页面 404，执行一下命令解决<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new tags &quot;标签&quot;</span><br></pre></td></tr></table></figure></p>
-<p>添加分类列表，设置文章的 categories 字段然后访问 /categories/front-end<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2017-10-20 20:00:00</span><br><span class="line">categories: front-end</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<p>单独设置归档(Archive)每页显示文章数量，例如每页 30 篇<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Archive page setting</span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: 30</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure></p>
-<p>列表文章显示 阅读更多 按钮，在需要截断的地方插入
+<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><ul>
+<li>创建个人GitHub Page</li>
+<li>安装Hexo</li>
+<li>使用Hexo创建博客</li>
+<li>推送网站</li>
+<li>更换主题</li>
+</ul>
         
-        </p><p class="article-more-link">
+        <p class="article-more-link">
             <a href="/2019/05/06/hexo/#more">
                 <span class="vm">阅读更多</span>
                 <i class="icon-arrow-double-right vm"></i>    
