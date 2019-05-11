@@ -138,106 +138,15 @@
     
     <section class="article-body markdown-body">
         
-        <h2 id="安装amix的终极配置Ultimate-vim"><a href="#安装amix的终极配置Ultimate-vim" class="headerlink" title="安装amix的终极配置Ultimate vim"></a>安装amix的终极配置Ultimate vim</h2><p>Open Git Bash(需要安装git for windows)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime</span><br><span class="line">sh ~/.vim_runtime/install_awesome_vimrc.sh</span><br></pre></td></tr></table></figure></p>
-<p>安装字体，作者推荐<a href="https://github.com/IBM/plex" target="_blank" rel="noopener">IBM Plex Mono font</a>，复制对应字体到C:\Windows\Fonts目录即可完成安装</p>
-<h2 id="自定义配置"><a href="#自定义配置" class="headerlink" title="自定义配置"></a>自定义配置</h2><h3 id="配置文件说明"><a href="#配置文件说明" class="headerlink" title="配置文件说明"></a>配置文件说明</h3><p>主配置文件在位于用户目录下.vimrc文件，vimrc文件引用了basic.vim、filetypes.vim、plugins_config.vim、extended.vim和用户可能创建的my_configs.vim文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">set runtimepath+=~/.vim_runtime</span><br><span class="line"></span><br><span class="line">source ~/.vim_runtime/vimrcs/basic.vim</span><br><span class="line">source ~/.vim_runtime/vimrcs/filetypes.vim</span><br><span class="line">source ~/.vim_runtime/vimrcs/plugins_config.vim</span><br><span class="line">source ~/.vim_runtime/vimrcs/extended.vim</span><br><span class="line"></span><br><span class="line">try</span><br><span class="line">source ~/.vim_runtime/my_configs.vim</span><br><span class="line">catch</span><br><span class="line">endtry</span><br></pre></td></tr></table></figure></p>
-<h3 id="快捷键配置"><a href="#快捷键配置" class="headerlink" title="快捷键配置"></a>快捷键配置</h3><p>前缀键<br>各类 vim 插件帮助文档中经常出现 <leader>，即，前缀键。vim 自带有很多快捷键，再加上各类插件的快捷键，大量快捷键出现在单层空间中难免引起冲突，为缓解该问题，引入了前缀键 <leader>，这样，键 r 可以配置成 r、<leader>r、<leader><leader>r 等等多个快捷键。前缀键是 vim 使用率较高的一个键（最高的当属 Esc），选一个最方便输入的键作为前缀键，将有助于提高编辑效率。找个无须眼睛查找、无须移动手指的键 —— 分号键，挺方便的，就在你右手小指处：<br>“ 定义快捷键的前缀，即<leader> let mapleader=”;”</leader></leader></leader></leader></leader></leader></p>
-<p>举例<br>使用set命令:<br>set pastetoggle=<f9></f9></p>
-<p>使用imap命令:<br>用Esc退出插入模式很麻烦，可以将另外的键映射到这个键上，比如将Ctrl-i映射为Esc:imap <c-i> <esc></esc></c-i></p>
-<p>“配置F4为Ack快捷键:<br>:map <f4> :Ack -i</f4></p>
-<p>在插入模式,设置ctrl+\为退出文件 :<br>:map! &lt;C-> <esc>:q<cr></cr></esc></p>
-<p>使用下表中不同形式的map命令，可以针对特定的模式设置键盘映射：</p>
-<table>
-<thead>
-<tr>
-<th>Command命令</th>
-<th>常规模式</th>
-<th>可视化模式</th>
-<th>运算符模式</th>
-<th>插入模式</th>
-<th>命令行模式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>:map</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>:nmap</td>
-<td>√</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>:vmap</td>
-<td></td>
-<td>√</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>:omap</td>
-<td></td>
-<td></td>
-<td>√</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>:map!</td>
-<td></td>
-<td></td>
-<td></td>
-<td>√</td>
-<td>√</td>
-</tr>
-<tr>
-<td>:imap</td>
-<td></td>
-<td></td>
-<td></td>
-<td>√</td>
-<td></td>
-</tr>
-<tr>
-<td>:cmap</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>√</td>
-</tr>
-</tbody>
-</table>
-<h3 id="字体配置"><a href="#字体配置" class="headerlink" title="字体配置"></a>字体配置</h3><p>在.vim_runtime目录新增my_configs.vim 文件 来配置你的个人配置，比如像我觉得默认配置的字体太大了，我这里需要调小一点，到vim_runtime\vimrcs目录下面找到extended.vim文件，复制里面相应配置的行，到 my_configs.vim 中，然后修改参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set gfn=IBM\ Plex\ Mono:h12,Source\ Code\ Pro:h10,Bitstream\ Vera\ Sans\ Mono:h9</span><br></pre></td></tr></table></figure>
-<h2 id="vim的分屏功能"><a href="#vim的分屏功能" class="headerlink" title="vim的分屏功能"></a>vim的分屏功能</h2><p>总结起来，基本都是ctrl+w然后加上某一个按键字母，触发一个功能。</p>
-<ol>
-<li>在shell里打开几个文件并且分屏:<br>　　vim -On file1 file2 …<br>　　vim -on file1 file2 …</li>
-</ol>
-<p>大O表示垂直分割(vertical)，小o表示水平分割（默认horizontal），后面的n表示分几个屏，实际上我觉得不用写，默认按后面要分割的文件数来决定分几个屏。</p>
-<ol start="2">
-<li><p>在vim里打开一个分屏:<br>　　创建空白分屏：<br>　　:new<br>　　打开任意文件：<br>　　:vsplit(:vsp) filename<br>　　:sp(split) filename<br>　　打开当前文件：<br>　　ctrl+w 和 s(split)<br>　　ctrl+w 和 v(vsplit)</p>
-</li>
-<li><p>关闭一个分屏:<br>　　:only 或者 ctrl+w 和 o取消其它分屏，只保留当前分屏<br>　　ctrl+w 和 c(close)<br>　　只剩最后一个分屏以后推出：<br>　　ctrl+w 和 q(quit)</p>
-</li>
-<li>移动光标，也就是切换分屏；也可以移动分屏，比如将左分屏移动到右边。<br>　　ctrl+w 和 w（各种切换，只有两个分屏的时候还是比较方便的）<br>　　ctrl+w 和 h(H) 左<br>　　ctrl+w 和 j(J) 下<br>　　ctrl+w 和 k(K) 上<br>　　ctrl+w 和 l(L) 右</li>
-<li>最后就是改变分屏尺寸的操作了。<br>　　ctrl+w 和 &lt; 左<br>　　ctrl+w 和 &gt; 右<br>　　ctrl+w 和 + 上<br>　　ctrl+w 和 - 下<br>　　ctrl+w 和 = 恢复均等</li>
-</ol>
-<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ol>
-<li>What is the <leader> in a .vimrc file?<br>The <leader> key is mapped to \ by default. So if you have a map of <leader>t, you can execute it by default with +t. For more detail or re-assigning it using the mapleader variable, see :help leader<br>在amix的vim配置中，在basic.vim文件中默认将leader键设置为“,”键<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let mapleader = &quot;,&quot;</span><br></pre></td></tr></table></figure>
-</leader></leader></leader></li>
-</ol>
-<p>ref:<a href="https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file" target="_blank" rel="noopener">https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file</a></p>
-
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Vim的配置对初学者来说不是一件容易的事情，选择一个成熟的配置是一个很好的选择，网上有很多配置方案，我在github上搜索vim找到amix/vimrc，是star数量最高的vim配置方案。</p>
+        
+        <p class="article-more-link">
+            <a href="/2019/05/11/Vim使用简介/#more">
+                <span class="vm">阅读更多</span>
+                <i class="icon-arrow-double-right vm"></i>    
+            </a>
+        </p>
+        
         
     </section>
 </article>
