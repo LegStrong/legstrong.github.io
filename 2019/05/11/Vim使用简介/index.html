@@ -41,8 +41,8 @@
                 <span class="nav-text">首页</span>
             </a>
         
-            <a class="nav-item" href="/categories/unity">
-                <span class="nav-text">Unity</span>
+            <a class="nav-item" href="/categories/tech">
+                <span class="nav-text">技术</span>
             </a>
         
             <a class="nav-item" href="/categories/other">
@@ -75,7 +75,7 @@
         
 
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装amix的终极配置Ultimate-vim"><span class="toc-number">2.</span> <span class="toc-text">安装amix的终极配置Ultimate vim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义配置"><span class="toc-number">3.</span> <span class="toc-text">自定义配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件说明"><span class="toc-number">3.1.</span> <span class="toc-text">配置文件说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快捷键配置"><span class="toc-number">3.2.</span> <span class="toc-text">快捷键配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体配置"><span class="toc-number">3.3.</span> <span class="toc-text">字体配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim的分屏功能"><span class="toc-number">4.</span> <span class="toc-text">vim的分屏功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NERDTree插件"><span class="toc-number">5.</span> <span class="toc-text">NERDTree插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A"><span class="toc-number">6.</span> <span class="toc-text">Q&amp;A</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装amix的终极配置Ultimate-vim"><span class="toc-number">2.</span> <span class="toc-text">安装amix的终极配置Ultimate vim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义配置"><span class="toc-number">3.</span> <span class="toc-text">自定义配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件说明"><span class="toc-number">3.1.</span> <span class="toc-text">配置文件说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快捷键配置"><span class="toc-number">3.2.</span> <span class="toc-text">快捷键配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体配置"><span class="toc-number">3.3.</span> <span class="toc-text">字体配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim的分屏功能"><span class="toc-number">4.</span> <span class="toc-text">vim的分屏功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NERDTree插件"><span class="toc-number">5.</span> <span class="toc-text">NERDTree插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#YouCompleteMe插件安装"><span class="toc-number">6.</span> <span class="toc-text">YouCompleteMe插件安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A"><span class="toc-number">7.</span> <span class="toc-text">Q&amp;A</span></a></li></ol>
         
     </div>
 </aside>
@@ -213,18 +213,45 @@
 <li>最后就是改变分屏尺寸的操作了。<br>　　ctrl+w 和 &lt; 左<br>　　ctrl+w 和 &gt; 右<br>　　ctrl+w 和 + 上<br>　　ctrl+w 和 - 下<br>　　ctrl+w 和 = 恢复均等</li>
 </ol>
 <h2 id="NERDTree插件"><a href="#NERDTree插件" class="headerlink" title="NERDTree插件"></a>NERDTree插件</h2><ol>
-<li><p>开关NERDTree Tab：<br> :NERDTreeToggle<br> or<br> ,nn  #默认映射的快捷键 map <leader>nn :NERDTreeToggle<cr></cr></leader></p>
+<li><p>开关NERDTree Tab：<br>:NERDTreeToggle<br>or<br>,nn  #默认映射的快捷键 map <leader>nn :NERDTreeToggle<cr></cr></leader></p>
 </li>
-<li><p>切换盘符<br> :NERDTree Z:\<br> or<br> cd drive:\<br> :NERDTree .</p>
+<li><p>切换盘符<br>:NERDTree Z:\<br>or<br>cd drive:\<br>:NERDTree .</p>
 </li>
-<li><p>帮助<br> ? 可以查看帮助</p>
+<li><p>帮助<br>? 可以查看帮助</p>
 </li>
 </ol>
+<h2 id="YouCompleteMe插件安装"><a href="#YouCompleteMe插件安装" class="headerlink" title="YouCompleteMe插件安装"></a>YouCompleteMe插件安装</h2><ol>
+<li><p>下载<br>amix的配置使用pathogen管理的插件，故将插件下载到~.vim_runtime/my_plugins</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~.vim_rumtime/my_plugins</span><br><span class="line">git clone https://github.com/Valloric/YouCompleteMe.git</span><br><span class="line">cd YouCompleteMe</span><br><span class="line">git submodule update --init --recursive</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装环境<br>安装一下软件</p>
+</li>
+</ol>
+<ul>
+<li>Python2或者Python3，但是版本要Python &gt;= 2.7.1 or &gt;= 3.5.1，添加到Path环境变量。</li>
+<li>安装CMake并添加Path到环境变量</li>
+<li>安装VS2017或VS2015（安装对应构建工具也可），安装的时候要选择C++构建工具。</li>
+</ul>
+<ol start="3">
+<li>安装<br>安装的时候执行python install.py即可，但是要根据具体情况添加相应参数：</li>
+</ol>
+<ul>
+<li>C系语言语法提示，–clang-completer或者–clangd-completer</li>
+<li>C#语法提示，–cs-completer（需要要将MSBuild路径添加的环境变量，set path=%path%;{msbuild path}即可）</li>
+<li>VS2015安装，–msvc 14</li>
+</ul>
+<p>cd %USERPROFILE%/vimfiles/bundle/YouCompleteMe<br>python install.py –clangd-completer</p>
 <h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ol>
 <li>What is the <leader> in a .vimrc file?<br>The <leader> key is mapped to \ by default. So if you have a map of <leader>t, you can execute it by default with +t. For more detail or re-assigning it using the mapleader variable, see :help leader<br>在amix的vim配置中，在basic.vim文件中默认将leader键设置为“,”键<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let mapleader = &quot;,&quot;</span><br></pre></td></tr></table></figure>
 </leader></leader></leader></li>
 </ol>
 <p>ref:<a href="https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file" target="_blank" rel="noopener">https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file</a></p>
+<ol start="2">
+<li>vim open file in a new tab<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:tabnew filename</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>I have added the following lines to my .vimrc that allow me to switch between tabs easily.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nnoremap &lt;C-Left&gt; :tabprevious&lt;CR&gt;                                                                            </span><br><span class="line">nnoremap &lt;C-Right&gt; :tabnext&lt;CR&gt;</span><br><span class="line">nnoremap &lt;C-j&gt; :tabprevious&lt;CR&gt;                                                                            </span><br><span class="line">nnoremap &lt;C-k&gt; :tabnext&lt;CR&gt;</span><br></pre></td></tr></table></figure></p>
+<p>ref:<a href="https://superuser.com/questions/1111169/vim-open-file-in-a-new-tab" target="_blank" rel="noopener">https://superuser.com/questions/1111169/vim-open-file-in-a-new-tab</a></p>
 
         
     </section>

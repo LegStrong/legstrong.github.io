@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+
+    
+
+    
+
+    <title>Python深度学习-什么是深度学习 | August Blog</title>
+    <meta name="author" content="August">
+    <meta name="version" content="1.0.0">
+    <meta name="keywords" content>
+    <meta name="description" content="深度学习是机器学习的一个分支领域：它是从数据中学习表示的一种新方法，强调从连续的层（layer）中进行学习，这些层对应于越来越有意义的表示。“深度学习”中的“深度”指的并不是利用这种方法所获取的更深层次的理解，而是指一系列连续的表示层。数据模型中 包含多少层，这被称为模型的深度（depth）。这一领域的其他名称包括分层表示学习（layered representations learning）和层级表示学习（hierarchical representations learning）。现代...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    
+    <link rel="alternate" href="/atom.xml" title="August Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <div class="nav-mobile">
+        <button id="open-panel" class="open-panel nav-mobile-item"><i class="icon-documents"></i></button>
+        <h1 class="nav-mobile-title nav-mobile-item">August Blog</h1>
+        <button id="open-menus" class="open-panel nav-mobile-item"><i class="icon-library"></i></button>
+    </div>
+
+    <nav id="nav-inner" class="nav-inner">
+        
+            <a class="nav-item" href="/">
+                <span class="nav-text">首页</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/tech">
+                <span class="nav-text">技术</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/other">
+                <span class="nav-text">其他</span>
+            </a>
+        
+            <a class="nav-item" href="/tags">
+                <span class="nav-text">标签</span>
+            </a>
+        
+            <a class="nav-item" href="/archives">
+                <span class="nav-text">归档</span>
+            </a>
+        
+            <a class="nav-item" href="/about">
+                <span class="nav-text">关于</span>
+            </a>
+        
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="https://legstrong.github.io"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#人工智能、机器学习与深度学习"><span class="toc-number">1.</span> <span class="toc-text">人工智能、机器学习与深度学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#人工智能"><span class="toc-number">1.1.</span> <span class="toc-text">人工智能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#机器学习"><span class="toc-number">1.2.</span> <span class="toc-text">机器学习</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#深度学习"><span class="toc-number">1.3.</span> <span class="toc-text">深度学习</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深度学习已经取得的进展"><span class="toc-number">2.</span> <span class="toc-text">深度学习已经取得的进展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#不要相信短期炒作"><span class="toc-number">3.</span> <span class="toc-text">不要相信短期炒作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#人工智能的未来"><span class="toc-number">4.</span> <span class="toc-text">人工智能的未来</span></a></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            Python深度学习-什么是深度学习
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="https://legstrong.github.io/2019/05/11/Python深度学习-什么是深度学习/index.html">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2019-05-11T14:40:53.000Z" itemprop="datePublished">2019-05-11</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/tools/">tools</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <p>深度学习是机器学习的一个分支领域：它是从数据中学习表示的一种新方法，强调从连续的层（layer）中进行学习，这些层对应于越来越有意义的表示。“深度学习”中的“深度”指的并不是利用这种方法所获取的更深层次的理解，而是指一系列连续的表示层。数据模型中 包含多少层，这被称为模型的深度（depth）。这一领域的其他名称包括分层表示学习（layered representations learning）和层级表示学习（hierarchical representations learning）。现代深度学习通常包含数十个甚至上百个连续的表示层，这些表示层全都是从训练数据中自动学习的。与此相反，其他机器学习方法的重点往往是仅仅学习一两层的数据表示，因此有时也被称为浅层学习（shallow learning）。</p>
+<a id="more"></a> 
+<h3 id="人工智能、机器学习与深度学习"><a href="#人工智能、机器学习与深度学习" class="headerlink" title="人工智能、机器学习与深度学习"></a>人工智能、机器学习与深度学习</h3><h4 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h4><p>简洁定义：努力将通常由人类完成的智力任务自动化。<br>符号主义人工智能能（symbolic AI）：只要程序员精心编写足够多的明确规则来处理知识，就可以实现与人类水平相当的人工智能。从20世纪50年代到80 年代末是人工智能的主流范式。在20世纪 80 年代的专家系统（expert system）热潮中，这一方法的热度达到了顶峰。</p>
+<h4 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h4><p>在经典的程序设计（即符号主义人工智能的范 式）中，人们输入的是规则（即程序）和需要根据这些规则进行处理的数据，系统输出的是答案 。利用机器学习，人们输入的是数据和从这些数据中预期得到的答案，系统输出的是规则。<br>机器学习系统是训练出来的，而不是明确地用程序编写出来的。虽然机器学习在 20 世纪 90 年代才开始蓬勃发展，但它迅速成为人工智能最受欢迎且最成<br>功的分支领域。这一发展的驱动力来自于速度更快的硬件与更大的数据集。</p>
+<h4 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h4><p>深度学习是机器学习的一个分支领域：它是从数据中学习表示的一种新方法，强调从连续的层（layer）中进行学习，这些层对应于越来越有意义的表示。“深度学习”中的“深度”指的并不是利用这种方法所获取的更深层次的理解，而是指一系列连续的表示层。数据模型中 包含多少层，这被称为模型的深度（depth）。这一领域的其他名称包括分层表示学习（layered representations learning）和层级表示学习（hierarchical representations learning）。现代深度学习通常包含数十个甚至上百个连续的表示层，这些表示层全都是从训练数据中自动学习的。与此相反，其他机器学习方法的重点往往是仅仅学习一两层的数据表示，因此有时也被称为浅层学习（shallow learning）。</p>
+<h3 id="深度学习已经取得的进展"><a href="#深度学习已经取得的进展" class="headerlink" title="深度学习已经取得的进展"></a>深度学习已经取得的进展</h3><ul>
+<li>接近人类水平的图像分类</li>
+<li>接近人类水平的语音识别</li>
+<li>接近人类水平的手写文字转录</li>
+<li>更好的机器翻译</li>
+<li>更好的文本到语音转换</li>
+<li>数字助理，比如谷歌即时（Google Now）和亚马逊 Alexa</li>
+<li>接近人类水平的自动驾驶</li>
+<li>更好的广告定向投放，Google、百度、必应都在使用</li>
+<li>更好的网络搜索结果</li>
+<li>能够回答用自然语言提出的问题</li>
+<li>在围棋上战胜人类</li>
+</ul>
+<h3 id="不要相信短期炒作"><a href="#不要相信短期炒作" class="headerlink" title="不要相信短期炒作"></a>不要相信短期炒作</h3><p>虽然深度学习近年来取得了令人瞩目的成就，但人们对这一领域在未来十年间能够取得的成就似乎期望过高。虽然一些改变世界的应用（比如自动驾驶汽车）已经触手可及，但更多的应用可能在长时间内仍然难以实现，比如可信的对话系统、达到人类水平的跨任意语言的机器翻译、达到人类水平的自然语言理解。我们尤其不应该把达到人类水平的通用智能（human-level general intelligence）的讨论太当回事。在短期内期望过高的风险是，一旦技术上没有实现，那么研究投资将会停止，而这会导致在很长一段时间内进展缓慢。</p>
+<h3 id="人工智能的未来"><a href="#人工智能的未来" class="headerlink" title="人工智能的未来"></a>人工智能的未来</h3><p>虽然我们对人工智能的短期期望可能不切实际，但长远来看前景是光明的。我们才刚刚开始将深度学习应用于许多重要的问题，从医疗诊断到数字助手，在这些问题上深度学习都发挥了变革性作用。<br>不要相信短期的炒作，但一定要相信长期的愿景。人工智能可能需要一段时间才能充分发挥其潜力。这一潜力的范围大到难以想象，但人工智能终将到来，它将以一种奇妙的方式改变我们的世界。</p>
+
+        
+    </section>
+</article>
+
+
+
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "7256f0c0716291c31927",
+        clientSecret: "69d82bcc43fd6e507b2fc667ba9e08c2eb477718",
+        repo: "legstrong.github.io",
+        owner: "legstrong",
+        admin: ["legstrong"],
+        id: "2019/05/11/Python深度学习-什么是深度学习",
+        distractionFreeMode: true,
+        title: "Python深度学习-什么是深度学习",
+        body: "https://legstrong.github.io/2019/05/11/Python深度学习-什么是深度学习/",
+        labels: ["tools"]
+    }).render('comments');
+    </script>
+</div>
+
+</div>
+        <footer class="footer">
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e4027971a230b210f4671f485b33846a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+</footer>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var nodes = {
+            nav: $('#nav'),
+            aside: $('#aside'),
+            asideInner: $('#aside-inner'),
+            navInner: $('#nav-inner')
+        };
+
+        var doing = false;
+        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+            if (nodes.aside.hasClass('mobile-open')) {
+                nodes.aside.removeClass('mobile-open');
+            } else {
+                nodes.aside.removeClass('mobile-close panel-show');
+            }
+            doing = false;
+        });
+        $('#open-panel, #aside-mask').on('click', function() {
+            if (doing) {
+                return;
+            }
+            
+            if (nodes.aside.hasClass('panel-show')) {
+                nodes.aside.addClass('mobile-close');
+            } else {
+                nodes.aside.addClass('mobile-open panel-show');
+            }
+        });
+        $('#open-menus').on('click', function() {
+            nodes.navInner.slideToggle();
+        });
+
+        if (window.innerWidth <= 960) {
+            setTimeout(function() {
+                nodes.navInner.slideUp();
+            }, 3000);
+        }
+    });
+    </script>
+    
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
+    
+
+</body>
+</html>

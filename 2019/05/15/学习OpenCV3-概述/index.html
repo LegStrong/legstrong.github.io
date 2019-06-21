@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+
+    
+
+    
+
+    <title>学习OpenCV3-概述 | August Blog</title>
+    <meta name="author" content="August">
+    <meta name="version" content="1.0.0">
+    <meta name="keywords" content>
+    <meta name="description" content="什么是OpenCVOpenCV是一个开源的计算机视觉库，1999年，Gary Bradski当时在英特尔任职，怀着通过为计算机视觉和人工智能的从业者提供稳定的基础架构并以此来推动产业发展的美好愿景，他启动了OpenCV项目。OpenCV的一个目标是提供易于使用的计算机视觉接口，从而帮助人们快速建立精巧的视觉应用。因为计算机视觉和机器学习经常在一起使用，所有OpenCV也包含了一个完备的、具有通用性的机器学习库（ML模块）。 应用领域自从测试版本在1999年1月发布以来，OpenCV已经...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    
+    <link rel="alternate" href="/atom.xml" title="August Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <div class="nav-mobile">
+        <button id="open-panel" class="open-panel nav-mobile-item"><i class="icon-documents"></i></button>
+        <h1 class="nav-mobile-title nav-mobile-item">August Blog</h1>
+        <button id="open-menus" class="open-panel nav-mobile-item"><i class="icon-library"></i></button>
+    </div>
+
+    <nav id="nav-inner" class="nav-inner">
+        
+            <a class="nav-item" href="/">
+                <span class="nav-text">首页</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/tech">
+                <span class="nav-text">技术</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/other">
+                <span class="nav-text">其他</span>
+            </a>
+        
+            <a class="nav-item" href="/tags">
+                <span class="nav-text">标签</span>
+            </a>
+        
+            <a class="nav-item" href="/archives">
+                <span class="nav-text">归档</span>
+            </a>
+        
+            <a class="nav-item" href="/about">
+                <span class="nav-text">关于</span>
+            </a>
+        
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="https://legstrong.github.io"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是OpenCV"><span class="toc-number">1.</span> <span class="toc-text">什么是OpenCV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用领域"><span class="toc-number">2.</span> <span class="toc-text">应用领域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是计算机视觉"><span class="toc-number">3.</span> <span class="toc-text">什么是计算机视觉</span></a></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            学习OpenCV3-概述
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="https://legstrong.github.io/2019/05/15/学习OpenCV3-概述/index.html">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2019-05-15T10:30:37.000Z" itemprop="datePublished">2019-05-15</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/OpenCV/">OpenCV</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <h2 id="什么是OpenCV"><a href="#什么是OpenCV" class="headerlink" title="什么是OpenCV"></a>什么是OpenCV</h2><p>OpenCV是一个开源的计算机视觉库，1999年，Gary Bradski当时在英特尔任职，怀着通过为计算机视觉和人工智能的从业者提供稳定的基础架构并以此来推动产业发展的美好愿景，他启动了OpenCV项目。OpenCV的一个目标是提供易于使用的计算机视觉接口，从而帮助人们快速建立精巧的视觉应用。因为计算机视觉和机器学习经常在一起使用，所有OpenCV也包含了一个完备的、具有通用性的机器学习库（ML模块）。</p>
+<a id="more"></a> 
+<h2 id="应用领域"><a href="#应用领域" class="headerlink" title="应用领域"></a>应用领域</h2><p>自从测试版本在1999年1月发布以来，OpenCV已经广泛应用于许多应用、产品以及科研工作中。这些应用包括在卫星和网络地图上拼接图像，图像扫描仪校准，医学图像的降噪，目标分析，安保以及工业检测系统，自动驾驶和安全系统，制造感知系统，相机校正，军事应用，无人中、地面、水下航行器。</p>
+<h2 id="什么是计算机视觉"><a href="#什么是计算机视觉" class="headerlink" title="什么是计算机视觉"></a>什么是计算机视觉</h2><p>计算机视觉这种技术可以将静止图片或视频数据转换为一种决策或新的表示。所有这样的转换都是为了完成某些特定目的而进行的。输入数据可能包含一些场景信息，例如“相机是搭载在一辆车上的”或者“雷达发现了一米之外有一个目标”。一个新的表示，意思是将彩色图像转换为黑色图像，或者从一个图像序列中消除相机运动所产生的影响。</p>
+<p>##OpenCV的起源<br>OpenCV起源于因特尔想要增强CPU集群性能的研究。该项目的结果是英特尔启动了许多项目，包括实时光线追踪算法以及三维墙体的显示。其中一位研究员Gary<br>Bradski，在访问大学的时候注意到很多的顶尖大学研究机构，比如MIT的媒体实验室，拥有非常完备的内部公开的计算机视觉开发接口——代码从一个学生传到另一个学生手中，并且会给每个新来的学生一个有价值的由他们自己开发的视觉应用方案。相较于从头开始设计并完成基本功能，新来的学生可以在之前的基础上进行很多新的工作。所以，OpenCV怀着为计算机视觉提供通用性接口这一思想开始了策划。在英特尔性能实验室团队的帮助下，OpenCV最初的核心代码和算法规范是英特尔俄罗斯实验室团队完成的，这就是OpenCV的起源，从英特尔软件性能组的实验室研究开始，俄罗斯的专家负责实现和优化。</p>
+<p>##OpenCV的结构<br>OpenCV是由层级结构组织的。处于最上层的是OpenCV和操作系统的交互。接下来是语言绑定和实例应用程序。再下一层是opencv_contrib模块所包含的OpenCV由其他开发人员所贡献的代码，其包含大多数高层级的函数功能。这就是OpenCV的核心。低层是基于硬件加速层（HAL）的各种硬件优化。<br><img src="/content/img/opencv-structure.png" alt></p>
+
+        
+    </section>
+</article>
+
+
+
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "7256f0c0716291c31927",
+        clientSecret: "69d82bcc43fd6e507b2fc667ba9e08c2eb477718",
+        repo: "legstrong.github.io",
+        owner: "legstrong",
+        admin: ["legstrong"],
+        id: "2019/05/15/学习OpenCV3-概述",
+        distractionFreeMode: true,
+        title: "学习OpenCV3-概述",
+        body: "https://legstrong.github.io/2019/05/15/学习OpenCV3-概述/",
+        labels: ["OpenCV"]
+    }).render('comments');
+    </script>
+</div>
+
+</div>
+        <footer class="footer">
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e4027971a230b210f4671f485b33846a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+</footer>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var nodes = {
+            nav: $('#nav'),
+            aside: $('#aside'),
+            asideInner: $('#aside-inner'),
+            navInner: $('#nav-inner')
+        };
+
+        var doing = false;
+        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+            if (nodes.aside.hasClass('mobile-open')) {
+                nodes.aside.removeClass('mobile-open');
+            } else {
+                nodes.aside.removeClass('mobile-close panel-show');
+            }
+            doing = false;
+        });
+        $('#open-panel, #aside-mask').on('click', function() {
+            if (doing) {
+                return;
+            }
+            
+            if (nodes.aside.hasClass('panel-show')) {
+                nodes.aside.addClass('mobile-close');
+            } else {
+                nodes.aside.addClass('mobile-open panel-show');
+            }
+        });
+        $('#open-menus').on('click', function() {
+            nodes.navInner.slideToggle();
+        });
+
+        if (window.innerWidth <= 960) {
+            setTimeout(function() {
+                nodes.navInner.slideUp();
+            }, 3000);
+        }
+    });
+    </script>
+    
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
+    
+
+</body>
+</html>
